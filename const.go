@@ -12,6 +12,9 @@ const TIME_FOR_SEND = 2
 const TIME_BEFORE_ACK_RESPOND = 2
 const TIME_FOR_ELABORATION = 3
 
+const LOG_ENABLED = false
+
+
 // DON'T CHANGE !!!
 const INQUEUE = 1000
 const SENT = 1001

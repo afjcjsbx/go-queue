@@ -38,9 +38,7 @@ The recommended way to install *go-queue* is Makefile:
 | TIME_FOR_SEND 	        | 1         | time that producer waits before sending a new message (for testing) (in seconds)
 | TIME_BEFORE_ACK_RESPOND         | 1             | time that consumer waits before sending ACK for received message (for testing) (in seconds)
 | TIME_FOR_ELABORATION          | 1           | time that consumer takes to elaborate the message (for testing) (in seconds)
-
-
-
+| LOG_ENABLED          | true           | enable or disable queue logs
 ## TODOs ##
 
 - Save unsent messages in a log to recover them in case of crash

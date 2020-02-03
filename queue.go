@@ -326,15 +326,19 @@ func checkError(err error) {
 }
 
 func LogQueue() {
-	for {
-		time.Sleep(time.Second)
-		l.SetPrefix(time.Now().Format("2006-01-02 15:04:05") + " [Queue] Messages in queue: " + strconv.Itoa(s.Size()))
-		l.Print(s.PrintMessages())
+	if LOG_ENABLED {
+		for {
+			time.Sleep(time.Second)
+			l.SetPrefix(time.Now().Format("2006-01-02 15:04:05") + " [Queue] Messages in queue: " + strconv.Itoa(s.Size()))
+			l.Print(s.PrintMessages())
+		}
 	}
 }
 
 func Log(s string) {
-	time.Sleep(time.Second)
-	l.SetPrefix(time.Now().Format("2006-01-02 15:04:05") + " [Queue] ")
-	l.Print(s + "\n")
+	if LOG_ENABLED {
+		time.Sleep(time.Second)
+		l.SetPrefix(time.Now().Format("2006-01-02 15:04:05") + " [Queue] ")
+		l.Print(s + "\n")
+	}
 }
